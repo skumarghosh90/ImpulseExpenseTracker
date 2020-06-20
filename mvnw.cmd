@@ -57,6 +57,11 @@ set ERROR_CODE=0
 @REM To isolate internal variables from possible post scripts, we use another setlocal
 @setlocal
 
+@REM "SET Database variables"
+SET "JDBC_DATABASE_URL=jdbc:h2:mem:inmemorydb"
+SET "JDBC_DATABASE_USERNAME=sa"
+SET "JDBC_DATABASE_PASSWORD=password"
+
 @REM ==== START VALIDATION ====
 if not "%JAVA_HOME%" == "" goto OkJHome
 
