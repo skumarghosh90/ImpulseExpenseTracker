@@ -31,7 +31,7 @@ public class ExpenseItem {
     @Column(name = "DATE")
     private LocalDate date;
     
-    @Column(name = "DESC", length = 500)
+    @Column(name = "DESCRIPTION", length = 500)
     private String description;
 
 
