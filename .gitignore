@@ -55,5 +55,6 @@ build/
 
 
 ### node related ###
-**/src/main/static/**/*
+**/src/main/resources/static/**/*
 **/src/webapp/node_modules
+**/src/webapp/node
