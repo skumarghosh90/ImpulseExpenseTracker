@@ -1,0 +1,34 @@
+debug: false
+
+
+spring:
+  data:
+    rest:
+      basePath: "/rest"
+  datasource:
+    url: jdbc:postgresql://ec2-54-247-78-30.eu-west-1.compute.amazonaws.com:5432/d2nqf0foog2vgm
+    driver: org.postgresql.Driver
+    username: mxuvanqxwujwzs
+    password: 24461784d28387d735db5d8cce8d73ba1dc58e949942089a484593a941c97409
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+      format-sql: true
+  h2:
+    console:
+      enabled: false
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+  servlet:
+    multipart:
+      enabled: true
+
+
+
+server:
+  compression:
+    enabled: true
