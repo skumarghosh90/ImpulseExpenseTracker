@@ -8,8 +8,10 @@ import com.impulsetech.ImpulseExpenseTracker.domain.ExpenseType;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 @RepositoryRestResource(path = "expense-items", collectionResourceRel = "expense-items")
+@PreAuthorize("hasRole('ROLE_USER')")
 public interface ExpenseItemRepository extends PagingAndSortingRepository<ExpenseItem, Long> {
 
     List<ExpenseItem> findByNameContainingIgnoreCase(String name);

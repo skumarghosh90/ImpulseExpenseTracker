@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Container } from 'react-bootstrap';
+import HomePage from './components/home/Home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Container fluid>
+      <HomePage/>
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );

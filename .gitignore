@@ -58,3 +58,4 @@ build/
 **/src/main/resources/static/**/*
 **/src/webapp/node_modules
 **/src/webapp/node
+.metadata/**/*

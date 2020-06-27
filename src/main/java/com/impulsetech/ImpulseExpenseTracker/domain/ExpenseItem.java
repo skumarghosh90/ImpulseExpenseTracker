@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -30,10 +31,15 @@ public class ExpenseItem {
 
     @Column(name = "DATE")
     private LocalDate date;
+
+    @Column(name = "IS_ACTIVE", nullable = false)
+    private Boolean active = Boolean.TRUE;
     
     @Column(name = "DESCRIPTION", length = 500)
     private String description;
 
+    @ManyToOne(optional = false)
+    private User user;
 
 
     public Long getId() {
@@ -67,6 +73,17 @@ public class ExpenseItem {
         this.description = description;
     }
     
-
+    public User getUser() {
+        return user;
+    }
+    public void setUser(User user) {
+        this.user = user;
+    }
     
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+    public Boolean isActive() {
+        return active;
+    }
 }
