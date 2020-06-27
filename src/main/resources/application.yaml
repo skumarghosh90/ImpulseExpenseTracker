@@ -29,8 +29,8 @@ spring:
       client:
         registration:
           google:
-            client-id: 447869883732-9r2qhrrnjg81e7tlgj53cscsgija9pqd.apps.googleusercontent.com
-            client-secret: lTD0B7W9j6F7h5nDXI8scHNP
+            client-id: ${GOOGLE_OAUTH_CLIENT_ID}
+            client-secret: ${GOOGLE_OAUTH_CLIENT_SECRET}
 
 management:
   endpoints:
