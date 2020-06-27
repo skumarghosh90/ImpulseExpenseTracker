@@ -1,0 +1,46 @@
+debug: false
+
+
+spring:
+  data:
+    rest:
+      basePath: "/rest"
+  datasource:
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+      format-sql: true
+  h2:
+    console:
+      enabled: false
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+  servlet:
+    multipart:
+      enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 447869883732-9r2qhrrnjg81e7tlgj53cscsgija9pqd.apps.googleusercontent.com
+            client-secret: lTD0B7W9j6F7h5nDXI8scHNP
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+    jmx:
+      exposure:
+        include: health,info
+
+server:
+  compression:
+    enabled: true
